@@ -6,6 +6,16 @@ package ryo.myappcompany.fixingaflawedweatherforecastapp.ui
 sealed interface WeatherUiState {
 
     /**
+     * 初期表示
+     */
+    object Default : WeatherUiState
+
+    /**
+     * 取得中
+     */
+    object Loading : WeatherUiState
+
+    /**
      * 取得成功
      *
      * @param weatherArray 取得天気情報の配列
@@ -16,9 +26,4 @@ sealed interface WeatherUiState {
      * 取得失敗
      */
     object Error : WeatherUiState
-
-    /**
-     * 取得中
-     */
-    object Loading : WeatherUiState
 }
