@@ -1,5 +1,7 @@
 package ryo.myappcompany.fixingaflawedweatherforecastapp.ui
 
+import ryo.myappcompany.fixingaflawedweatherforecastapp.domain.WeatherInfo
+
 /**
  * 天気情報の取得状態を管理するクラス
  */
@@ -18,9 +20,9 @@ sealed interface WeatherUiState {
     /**
      * 取得成功
      *
-     * @param weatherArray 取得天気情報の配列
+     * @param weatherInfo 取得天気情報の配列
      */
-    data class Success(val weatherArray: String) : WeatherUiState
+    data class Success(val weatherInfo: WeatherInfo) : WeatherUiState
 
     /**
      * 取得失敗
